@@ -1,0 +1,66 @@
+//
+// _buttons.scss
+//
+
+button,
+a {
+  outline: none !important;
+}
+
+// Rounded Buttons
+.btn-rounded {
+  border-radius: 30px;
+}
+
+.btn-dark {
+  color: $gray-200 !important;
+}
+
+.btn-outline-dark {
+  &:hover {
+    color: $gray-200 !important;
+  }
+}
+.btn-secondary{
+  background-color: #e0e0ea;
+  &:active,
+  &:hover{
+    background-color: var(--#{$prefix}light);
+  }
+}
+
+// dark
+[data-bs-theme="dark"] {
+  .btn-secondary {
+    background-color: #3c445a;
+    border-color: #3c445a;
+    color: var(--#{$prefix}dark);
+    &:active,
+    &:hover,
+    &.show {
+      background-color: var(--#{$prefix}tertiary-bg) !important;
+      border-color: var(--#{$prefix}tertiary-bg) !important;
+      color: var(--#{$prefix}dark) !important;
+    }
+  }
+  .btn-outline-secondary {
+    border-color: var(--#{$prefix}gray-700);
+    color: var(--#{$prefix}gray-700);
+    &:active,
+    &:hover {
+      background-color: var(--#{$prefix}tertiary-bg);
+      border-color: var(--#{$prefix}tertiary-bg);
+      color: var(--#{$prefix}dark);
+    }
+  }
+  .btn-check + .btn {
+    color: var(--#{$prefix}dark);
+    background-color: #3c445a;
+    border-color: #3c445a;
+  }
+  .btn-check:checked + .btn {
+    color: var(--#{$prefix}dark);
+    background-color: var(--#{$prefix}tertiary-bg);
+    border-color: var(--#{$prefix}tertiary-bg);
+  }
+}
